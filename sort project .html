@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: black;
+        color: aliceblue;
+      }
+      #result {
+        color: rgb(242, 255, 127);
+      }
+      #product_value {
+        color: rgb(121, 187, 118);
+      }
+      h4 {
+        font-size: 25px;
+        color: rgb(41, 173, 8);
+      }
+      h2 {
+        font-size: 30px;
+        color: rgb(25, 142, 219);
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h2>JavaScript Array Sort reverse</h2>
+
+      <button
+        onclick="sortfunction()"
+        style="color: rgb(255, 255, 255); background-color: rgb(28, 159, 199)"
+      >
+        Sort me
+      </button>
+      <button
+        onclick="reversefunction()"
+        style="color: aliceblue; background-color: crimson"
+      >
+        Reverse me
+      </button>
+      <p id="result"></p>
+      <h4>Multiply every element in the array with 20(x):</h4>
+      <p id="product_value"></p>
+      <script>
+        var fruits = [
+          "Banana ",
+          "Orange ",
+          "Apple ",
+          "Mango ",
+          "DragonFruit ",
+          "Nashpati ",
+          "Kaadal ",
+        ];
+        document.getElementById("result").innerHTML = fruits;
+
+        function sortfunction() {
+          fruits.sort();
+          document.getElementById("result").innerHTML = fruits;
+        }
+        function reversefunction() {
+          fruits.reverse();
+          document.getElementById("result").innerHTML = fruits;
+        }
+        var numbers = [28, 23, 232, 61, 96, 32, 53];
+        function myFunction(num) {
+          return num * 20;
+        }
+        var newarray = numbers.map(myFunction);
+        document.getElementById("product_value").innerHTML =
+          newarray.join("==");
+      </script>
+    </center>
+  </body>
+</html>
